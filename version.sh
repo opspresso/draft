@@ -18,7 +18,11 @@ if [ "${NOW}" != "${NEW}" ]; then
     git config credential.helper 'cache --timeout=120'
     git config --global user.name "bot"
     git config --global user.email "ops@nalbam.com"
+
     git add --all
     git commit -m "${NEW}"
     git push -q https://${GITHUB_TOKEN}@github.com/${USERNAME}/${REPONAME}.git master
+
+    git tag ${NEW}
+    git push -q https://${GITHUB_TOKEN}@github.com/${USERNAME}/${REPONAME}.git ${NEW}
 fi
