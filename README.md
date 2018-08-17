@@ -1,5 +1,5 @@
 # draft
 
 ```bash
-docker pull opspresso/draft
+docker pull quay.io/opspresso/draft
 ```
