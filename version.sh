@@ -14,7 +14,7 @@ echo "NEW: ${NEW}"
 
 if [ "${NOW}" != "${NEW}" ]; then
     printf "${NEW}" > VERSION
-    sed -i -e "s/VERSION=*/VERSION=${NEW}/g" Dockerfile
+    sed -i -e "s/VERSION\=*/VERSION=${NEW}/g" Dockerfile
 
     git config credential.helper 'cache --timeout=120'
     git config --global user.name "bot"
