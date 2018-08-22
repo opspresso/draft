@@ -2,7 +2,7 @@
 
 FROM alpine
 
-RUN apk add --no-cache bash curl
+RUN apk add --no-cache bash curl git
 
 ENV VERSION v0.15.0
 RUN curl -sL https://azuredraft.blob.core.windows.net/draft/draft-${VERSION}-linux-amd64.tar.gz | tar xz && \
