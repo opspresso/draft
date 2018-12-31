@@ -1,7 +1,6 @@
+#!/bin/bash
 
 SHELL_DIR=$(dirname $0)
-
-CMD=${1:-${CIRCLE_JOB}}
 
 USERNAME=${CIRCLE_PROJECT_USERNAME}
 REPONAME=${CIRCLE_PROJECT_REPONAME}
@@ -93,7 +92,7 @@ _cf_reset() {
 }
 
 _replace() {
-    sed -i -e "s/ENV VERSION .*/ENV VERSION ${NEW}/g" Dockerfile
+    sed -i -e "s/ENV VERSION .*/ENV VERSION ${NEW}/g" ${SHELL_DIR}/Dockerfile
 }
 
 build() {
@@ -101,8 +100,8 @@ build() {
 
     _get_version
 
-    if [ "${NOW}" != "${NEW}" ]; then
-        printf "${NEW}" > VERSION
+    if [ "${NEW}" != "" ] && [ "${NEW}" != "${NOW}" ]; then
+        printf "${NEW}" > ${SHELL_DIR}/VERSION
         printf "${NEW}" > ${SHELL_DIR}/target/dist/${REPONAME}
 
         # replace
