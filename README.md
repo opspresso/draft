@@ -1,7 +1,7 @@
 # draft
 
-[![GitHub release](https://img.shields.io/github/release/opspresso/draft.svg)](https://github.com/opspresso/draft/releases)
-[![CircleCI](https://circleci.com/gh/opspresso/draft.svg?style=svg)](https://circleci.com/gh/opspresso/draft)
+[![GitHub Actions status](https://github.com/opspresso/draft/workflows/Build-Push/badge.svg)](https://github.com/opspresso/draft/actions)
+[![GitHub Releases](https://img.shields.io/github/release/opspresso/draft.svg)](https://github.com/opspresso/draft/releases)
 
 [![DockerHub Badge](http://dockeri.co/image/opspresso/draft)](https://hub.docker.com/r/opspresso/draft/)
 
