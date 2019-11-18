@@ -12,7 +12,7 @@ docker pull opspresso/draft
 ## version
 
 ```
-ENV VERSION v0.14.0-rc2
+ENV VERSION v0.13.0
 ```
 
 ## latest
