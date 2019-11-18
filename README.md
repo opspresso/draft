@@ -14,3 +14,9 @@ docker pull opspresso/draft
 ```
 ENV VERSION v0.5.0
 ```
+
+## latest
+
+```
+ENV LATEST 0
+```
